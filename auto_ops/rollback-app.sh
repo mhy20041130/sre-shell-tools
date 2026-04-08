@@ -31,7 +31,7 @@ systemctl start $APP_NAME
 
 # 4. 校验回滚结果
 if systemctl is-active --quiet $APP_NAME; then
-    echo -e "\n✅ 回滚成功：$APP_NAME"
+    echo -e "\n回滚成功：$APP_NAME"
 else
-    echo -e "\n❌ 回滚失败，请手动检查！"
+    echo -e "\n回滚失败，请手动检查！"
 fi
