@@ -13,7 +13,7 @@ echo "当前${MOUNT_POINT}磁盘使用率：${USE}%"
 
 # 使用率超过阈值则告警
 if [ "$USED" -ge "$THRESHOLD" ]; then
-    echo -e "\n⚠️  磁盘使用率超过阈值，开始发送告警..."
+    echo -e "\n  磁盘使用率超过阈值，开始发送告警..."
     # 调用钉钉告警
     $ALERT_SCRIPT_DIR/dingtalk-alert.sh "$MSG"
     # 调用企业微信告警
