@@ -21,13 +21,13 @@ for cert in $CERT_DIR/*.pem $CERT_DIR/*.crt; do
         DAYS_LEFT=$(( (EXPIRE_TIMESTAMP - NOW_TIMESTAMP) / 86400 ))
 
         if [ $DAYS_LEFT -lt 0 ]; then
-            echo "❌ 证书已过期：$cert（过期$((-DAYS_LEFT))天）"
+            echo " 证书已过期：$cert（过期$((-DAYS_LEFT))天）"
             # 注释掉下面一行可自动删除过期证书（建议先确认再开启）
             # rm -f "$cert" && echo "已删除过期证书：$cert"
         elif [ $DAYS_LEFT -lt $EXPIRED_DAYS ]; then
-            echo "⚠️  证书即将过期：$cert（剩余$DAYS_LEFT天）"
+            echo "  证书即将过期：$cert（剩余$DAYS_LEFT天）"
         else
-            echo "✅ 证书正常：$cert（剩余$DAYS_LEFT天）"
+            echo "证书正常：$cert（剩余$DAYS_LEFT天）"
         fi
     fi
 done
