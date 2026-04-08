@@ -31,11 +31,11 @@ systemctl start $APP_NAME
 
 # 5. 校验发布结果
 if systemctl is-active --quiet $APP_NAME; then
-    echo -e "\n✅ 发布成功：$APP_NAME"
+    echo -e "\n发布成功：$APP_NAME"
 else
-    echo -e "\n❌ 发布失败，执行回滚..."
+    echo -e "\n 发布失败，执行回滚..."
     systemctl stop $APP_NAME
     cp $BACKUP_DIR/$(ls -t $BACKUP_DIR | head -1) $APP_DIR/$APP_NAME.jar 2>/dev/null
     systemctl start $APP_NAME
-    echo "✅ 回滚完成，请检查服务状态"
+    echo "回滚完成，请检查服务状态"
 fi
