@@ -27,7 +27,7 @@
 ## 快速开始
 ```bash
 # 克隆项目
-git clone https://github.com/你的用户名/sre-shell-tools.git
+git clone https://github.com/mhy1130/sre-shell-tools.git
 
 # 进入目录
 cd sre-shell-tools
