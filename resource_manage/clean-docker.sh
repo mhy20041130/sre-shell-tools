@@ -18,6 +18,6 @@ docker volume ls -f "dangling=true" -q | xargs -r docker volume rm
 echo "4. 清理未使用网络..."
 docker network ls -f "dangling=true" -q | xargs -r docker network rm
 
-echo -e "\n✅ Docker资源清理完成！"
+echo -e "\n Docker资源清理完成"
 echo "当前Docker资源使用情况："
 docker system df
