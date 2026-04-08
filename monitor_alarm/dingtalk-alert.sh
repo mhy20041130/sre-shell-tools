@@ -21,7 +21,7 @@ curl -s -X POST "$WEBHOOK_URL" \
   }" > /dev/null 2>&1
 
 if [ $? -eq 0 ]; then
-    echo "✅ 钉钉告警发送成功"
+    echo "钉钉告警发送成功"
 else
-    echo "❌ 钉钉告警发送失败"
+    echo "钉钉告警发送失败"
 fi
